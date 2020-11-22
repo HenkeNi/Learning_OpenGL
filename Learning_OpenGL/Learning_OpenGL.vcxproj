@@ -146,10 +146,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
-    <ClCompile Include="src\Basic.cpp" />
+    <ClCompile Include="src\CreateWindow.cpp" />
+    <ClCompile Include="src\DrawTriangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Basic.h" />
+    <ClInclude Include="src\CreateWindow.h" />
+    <ClInclude Include="src\DrawTriangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\Basic.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\Guide.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
