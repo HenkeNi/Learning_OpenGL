@@ -182,11 +182,36 @@ The Graphics Pipeline:
 
 			COMPILING A SHADER:
 
+				In order for OpenGL to use the shader, it has to dynamically compile it at run-time from its source code.
+				The first thing we need to do is create a shader object, referenced by an id. We store the vertex shader as an 
+				unsigned int and create the shader with glCreateShader:
+				
+					unsigned int vertexShader;
+					vertexShader = glCreateShader(GL_VERTEX_SHADER);
+					
+				We provide the type of shader we want to create as an argument to glCreateShader. Since we're creating a vertex shader we pass
+				in GL_VERTEX_SHADER.
+				
+				Next we attach the shader source code to the shader object and compile the shader:
+					
+					glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+					glCompileShader(vertexShader);
+					
+				The glShaderSource function takes the shader object to compile to as its first argument. 
+				The second argument specifies how many strings we're passing as source code, which is only one.
+				The third parameter is the actual source code of the vertex shader,
+				we can leave the 4th parameter to NULL.
+
 				
 
+				You probably want to check if compilation was successful after the call to glCompileShader and if not, what errors were found so 				 you can fix those. Checking for compile-time errors is accomplished as follows:
 
+					int  success;
+					char infoLog[512];
+					glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
 
-
+				First we define an integer to indicate success and a storage container for the error messages (if any). 
+				Then we check if compilation was successful with glGetShaderiv. If compilation failed, we should retrieve the error message with 				glGetShaderInfoLog and print the error message.
 
 
 
