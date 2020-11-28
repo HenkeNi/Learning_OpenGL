@@ -2,34 +2,14 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-
 #include <string>
 
-namespace draw_triangle
+namespace draw_square
 {
-	void run();
-
-	void drawTriangleTest();
-
-	void drawTriangle2();
-
-	
+	void drawSquare();
 
 	std::string parseShader(const std::string& filepath);
 	unsigned int compileShader(unsigned int type, const std::string& source);
 	unsigned int createShaders(const std::string& vertexShader, const std::string& fragmentShader);
 	void processInput(GLFWwindow* window);
-	void drawTriangle();
-
-
-
-
-	void drawTwoTrianglesv1();
-	void drawTwoTrianglesv1p2();
-
-	void drawTwoTrianglesv2();
-
-
-
-	void drawTwoTrianglesDifferentShaders();
 }

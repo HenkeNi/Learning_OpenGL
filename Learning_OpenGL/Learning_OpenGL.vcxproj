@@ -145,16 +145,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Abstracting OpenGL\Application.cpp" />
+    <ClCompile Include="src\Abstracting OpenGL\IndexBuffer.cpp" />
+    <ClCompile Include="src\Abstracting OpenGL\Renderer.cpp" />
+    <ClCompile Include="src\Abstracting OpenGL\VertexBuffer.cpp" />
+    <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\CreateWindow.cpp" />
+    <ClCompile Include="src\DrawSquare.cpp" />
     <ClCompile Include="src\DrawTriangle.cpp" />
+    <ClCompile Include="src\Abstracting OpenGL\VertexArray.cpp" />
+    <ClCompile Include="src\Abstracting OpenGL\VertexBufferLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Abstracting OpenGL\Application.h" />
+    <ClInclude Include="src\Abstracting OpenGL\IndexBuffer.h" />
+    <ClInclude Include="src\Abstracting OpenGL\Renderer.h" />
+    <ClInclude Include="src\Abstracting OpenGL\VertexBuffer.h" />
     <ClInclude Include="src\CreateWindow.h" />
+    <ClInclude Include="src\DrawSquare.h" />
     <ClInclude Include="src\DrawTriangle.h" />
+    <ClInclude Include="src\Abstracting OpenGL\VertexArray.h" />
+    <ClInclude Include="src\Abstracting OpenGL\VertexBufferLayout.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\Basic.shader" />
+    <None Include="res\shaders\FragmentShader.shader" />
+    <None Include="res\shaders\VertexShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\Guide.txt" />

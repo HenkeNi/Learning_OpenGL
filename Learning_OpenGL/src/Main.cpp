@@ -1,5 +1,7 @@
+#include "Abstracting OpenGL/Application.h"
 #include "CreateWindow.h"
 #include "DrawTriangle.h"
+#include "DrawSquare.h"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -149,11 +151,16 @@ static unsigned int createShader(const std::string& vertexShader, const std::str
 
 int main(void)
 {
+	//abstracting_opengl_application::Run();
+	draw_triangle::drawTwoTrianglesDifferentShaders();
+
+
 	//create_window::createWindowTest();
 	//create_window::run();
 	//draw_triangle::run();
-	draw_triangle::drawTriangleTest();
-
+	//draw_triangle::drawTriangle2();
+	draw_square::drawSquare();
+	//draw_triangle::drawTriangle();
 
 
 
